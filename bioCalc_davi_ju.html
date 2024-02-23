@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Biometria para Piscicultura</title>
+  <style>
+    body {
+            background-image: url("https://piscespros.com/wp-content/uploads/2020/12/Side-Betta-scaled.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 20vw;
+            font-size: 1.2em;
+            background-color: rgb(0, 0, 0);
+            
+        }
+        
+  /* Aqui muda a aparencia dos rotulos */
+   label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: whitesmoke;
+        }
+  </style>
+  
+</head>
+<body style="color: white;">
+  <h1>Calculadora de Biometria para Piscicultura</h1>
+
+  <label for="identificacao">Identificação do viveiro:</label>
+  <input type="text" id="identificacao" required><br>
+
+  <label for="volume">Volume do viveiro (m³):</label>
+  <input type="number" step="0.01" id="volume" required><br>
+
+  <label for="quantidade">Quantidade de peixes:</label>
+  <input type="number" id="quantidade" required><br>
+
+  <label for="peso">Peso médio dos peixes:</label>
+  <input type="number" step="0.01" id="peso" required><br>
+
+  <button onclick="adicionarViveiro()">Adicionar Viveiro</button><br>
+
+  <label for="pesquisar">Pesquisar por identificação:</label>
+  <input type="text" id="pesquisar">
+  <button onclick="pesquisarViveiroPorIdentificacao()">Pesquisar</button>
+
+  <div id="resultado" style="background-color:rgb(71, 73, 73); width: 20vw"> </div>
+
+  <script src="./script.js">
+    
+  </script>
+</body>
+</html>
